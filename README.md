@@ -1,33 +1,34 @@
 # checkproxy
-Программа для проверки работы прокси.
+A tool for testing proxy server availability.
 
 ![Python](https://img.shields.io/badge/Python-3.7+-blue.svg)
 ![Requests](https://img.shields.io/badge/Requests-2.25+-green.svg)
 ![PySocks](https://img.shields.io/badge/PySocks-1.7+-orange.svg)
 
-## О проекте
-checkproxy - это инструмент для автоматической проверки работоспособности прокси-серверов, демонстрирующий принципы сетевого взаимодействия, определения типов прокси и измерения времени отклика.
+## About the Project
+checkproxy is an automated tool for testing proxy server availability, demonstrating principles of network interaction, proxy type detection, and response time measurement.
 
-### Возможности
-- Автоматическое определение типа прокси (HTTP, HTTPS, SOCKS4, SOCKS5)
-- Проверка работоспособности через httpbin.org
-- Измерение времени ответа в миллисекундах
-- Поддержка формата proxy.txt (по одному прокси на строку)
-- Сохранение рабочих прокси в файл working_proxy.txt
-- Автоматическая фильтрация дубликатов
-- Статистика по типам рабочих прокси
-- Отображение даты и времени проверки
-- Простая и понятная структура кода
+### Features
+- Automatic detection of proxy types (HTTP, HTTPS, SOCKS4, SOCKS5)
+- Availability testing via httpbin.org
+- Response time measurement in milliseconds
+- Support for proxy.txt format (one proxy per line)
+- Saves working proxies to working_proxy.txt
+- Automatic duplicate filtering
+- Statistics on working proxy types
+- Display of date and time of testing
+- Simple and clear code structure
 
-### Формат входных данных
-Создайте файл `proxy.txt` в папке с программой, каждый прокси на новой строке:
+### Input Format
+Create a `proxy.txt` file in the program folder, one proxy per line:
 ```
 192.168.1.1:8080
 proxy.example.com:3128
 socks5://127.0.0.1:1080
 ```
-### Формат выходных данных
-Рабочие прокси сохраняются в `working_proxy.txt`:
+
+### Output Format
+Working proxies are saved to `working_proxy.txt`:
 ```
 http://192.168.1.1:8080 # 125ms
 socks5://127.0.0.1:1080 # 89ms
